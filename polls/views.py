@@ -37,4 +37,4 @@ def vote(request, question_id):
         selected_choice.votes += 1
         selected_choice.save()
         # prevent data from being posted twice if user hits the Back button
-        return HttpResponseRedirect(reverse('polls:results', args=(question.id)))
+        return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
